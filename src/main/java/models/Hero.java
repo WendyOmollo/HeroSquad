@@ -56,7 +56,14 @@ public class Hero {
         public void setId(int id) {
             this.id = id;
         }
-        public void update(String name,int age,String strength,String weakness){
+        public void updateHero(String name,int age,String strength,String weakness){
+            this.name = name;
+            this.age = age;
+            this.strength = strength;
+            this.weakness = weakness;
+        }
+        public void deleteHero(int id,String name,int age,String strength,String weakness){
+            this.id =id;
             this.name = name;
             this.age = age;
             this.strength = strength;

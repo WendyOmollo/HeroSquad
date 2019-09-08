@@ -38,13 +38,17 @@ public class HeroTest  {
         int formerAge = hero.getAge();
         String formerStrength = hero.getStrength();
         String formerWeakness = hero.getWeakness();
-        hero.update("Batman",21,"Swimming","Angry");
+        hero.updateHero("Batman",21,"Swimming","Angry");
         assertEquals(formerId,hero.getId());
         assertNotEquals(formerAge,hero.getAge());
         assertNotEquals(formerName,hero.getName());
         assertNotEquals(formerStrength,hero.getStrength());
         assertNotEquals(formerWeakness,hero.getWeakness());
-
+    }@Test
+    public void makeFirstHero_getHero_deleteTheHero() throws Exception{
+        Hero hero = setUpNewHero();
+        hero.deleteHero(1,"Batman",21,"Flying","Angry");
+        assertEquals(1,hero.getId());
     }
 
     public Hero setUpNewHero(){
