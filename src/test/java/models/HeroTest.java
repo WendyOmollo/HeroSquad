@@ -18,15 +18,25 @@ public class HeroTest  {
     }
     @Test
     public void makeFirstHero_confirmIfMade_true() throws Exception{
-        Hero hero = new Hero("Batman",20,"Flying","Angry");
+        Hero hero = setUpNewHero();
         assertEquals(true,hero instanceof Hero);
     }
     @Test
     public void makeFirstHero_confirmIfMade_getAllDetails() throws Exception{
-        Hero hero = new Hero("Batman",20,"Flying","Angry");
-        Assert.assertEquals(true,hero.getName());
-        Assert.assertEquals(true,hero.getAge());
-        Assert.assertEquals(true,hero.getStrength());
-        Assert.assertEquals(true,hero.getWeakness());
+
+        Hero hero = setUpNewHero();
+        assertEquals("Superman",hero.getName());
+        assertEquals(34,hero.getAge());
+        assertEquals("Flying",hero.getStrength());
+        assertEquals("Emotional",hero.getWeakness());
+    }
+//    @Test
+//    public void makeFirstHero_getHero_updateDetails() throws Exception{
+//        Hero hero = setUpNewHero();
+//
+//    }
+
+    public Hero setUpNewHero(){
+        return new Hero("Superman",34,"Flying","Emotional");
     }
 }
