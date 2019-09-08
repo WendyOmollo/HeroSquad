@@ -6,12 +6,14 @@ public class Hero {
     private int age;
     private String strength ;
     private String weakness;
+    private int id;
 
         public Hero(String name, int age, String strength, String weakness){
         this.name = name;
         this.age = age;
         this.strength = strength;
         this.weakness = weakness;
+        this.id = id;
 
         }
 
@@ -46,4 +48,18 @@ public class Hero {
         public void setWeakness(String weakness) {
             this.weakness = weakness;
         }
-    }
+
+        public int getId() {
+            return id;
+        }
+
+        public void setId(int id) {
+            this.id = id;
+        }
+        public void update(String name,int age,String strength,String weakness){
+            this.name = name;
+            this.age = age;
+            this.strength = strength;
+            this.weakness = weakness;
+        }
+}

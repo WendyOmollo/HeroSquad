@@ -30,11 +30,22 @@ public class HeroTest  {
         assertEquals("Flying",hero.getStrength());
         assertEquals("Emotional",hero.getWeakness());
     }
-//    @Test
-//    public void makeFirstHero_getHero_updateDetails() throws Exception{
-//        Hero hero = setUpNewHero();
-//
-//    }
+    @Test
+    public void makeFirstHero_getHero_updateDetails() throws Exception{
+        Hero hero = setUpNewHero();
+        int formerId = hero.getId();
+        String formerName = hero.getName();
+        int formerAge = hero.getAge();
+        String formerStrength = hero.getStrength();
+        String formerWeakness = hero.getWeakness();
+        hero.update("Batman",21,"Swimming","Angry");
+        assertEquals(formerId,hero.getId());
+        assertNotEquals(formerAge,hero.getAge());
+        assertNotEquals(formerName,hero.getName());
+        assertNotEquals(formerStrength,hero.getStrength());
+        assertNotEquals(formerWeakness,hero.getWeakness());
+
+    }
 
     public Hero setUpNewHero(){
         return new Hero("Superman",34,"Flying","Emotional");
