@@ -27,6 +27,17 @@ public class SquadTest {
         assertEquals(4,squad.getMaxSize());
         assertEquals("Beating thieves",squad.getMission());
     }
+    @Test
+    public void makeNewSquad_updateSquadDetails() throws Exception{
+        Squad squad = setUpNewSquad();
+        String formerName = squad.getName();
+        int formerMaxSize = squad.getMaxSize();
+        String formerMission = squad.getMission();
+        squad.updateSquad("PowerPuff Girls",3,"Taking kids to school");
+        assertNotEquals(formerName,squad.getName());
+        assertNotEquals(formerMaxSize,squad.getMaxSize());
+        assertNotEquals(formerMission,squad.getMission());
+    }
 
     public Squad setUpNewSquad(){
         return new Squad("Titans",4,"Beating thieves");

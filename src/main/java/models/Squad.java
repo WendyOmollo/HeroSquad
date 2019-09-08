@@ -37,4 +37,9 @@ package models;
         public void setName(String name) {
             this.name = name;
         }
+        public void updateSquad(String name,int maxSize,String mission){
+            this.name = name;
+            this.maxSize = maxSize;
+            this.mission = mission;
+        }
     }
