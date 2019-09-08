@@ -38,6 +38,12 @@ public class SquadTest {
         assertNotEquals(formerMaxSize,squad.getMaxSize());
         assertNotEquals(formerMission,squad.getMission());
     }
+    @Test
+    public void makeASquad_deleteASquad() throws Exception{
+        Squad squad = setUpNewSquad();
+        squad.deleteSquad("Titans",4,"Beating thieves",1);
+        assertEquals(1,squad.getIdentifier());
+    }
 
     public Squad setUpNewSquad(){
         return new Squad("Titans",4,"Beating thieves");
