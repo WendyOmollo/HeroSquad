@@ -1,7 +1,9 @@
 package models;
 
-public class Hero {
+import java.util.ArrayList;
 
+public class Hero {
+    private static ArrayList<Hero> examples= new ArrayList<>();
     private String name;
     private int age;
     private String strength ;
@@ -11,13 +13,22 @@ public class Hero {
         public Hero(String name, int age, String strength, String weakness){
         this.name = name;
         this.age = age;
+        examples.add(this);
         this.strength = strength;
         this.weakness = weakness;
-        this.id = id;
+        this.id = examples.size();
 
         }
 
-        public int getAge() {
+    public static ArrayList<Hero> getAll() {
+        return examples;
+    }
+
+    public static void setExamples(ArrayList<Hero> examples) {
+        Hero.examples = examples;
+    }
+
+    public int getAge() {
             return age;
         }
 
@@ -69,4 +80,9 @@ public class Hero {
             this.strength = strength;
             this.weakness = weakness;
         }
+        public static void clearAllHeroes(){
+            examples.clear();
+        }
+
+
 }

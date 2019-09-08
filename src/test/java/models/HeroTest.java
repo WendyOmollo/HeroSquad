@@ -15,6 +15,7 @@ public class HeroTest  {
 
     @After
     public void tearDown() throws Exception {
+        Hero.clearAllHeroes();
     }
     @Test
     public void makeFirstHero_confirmIfMade_true() throws Exception{
@@ -44,12 +45,20 @@ public class HeroTest  {
         assertNotEquals(formerName,hero.getName());
         assertNotEquals(formerStrength,hero.getStrength());
         assertNotEquals(formerWeakness,hero.getWeakness());
-    }@Test
-    public void makeFirstHero_getHero_deleteTheHero() throws Exception{
+        }
+        @Test
+        public void makeFirstHero_getHero_deleteTheHero() throws Exception{
         Hero hero = setUpNewHero();
         hero.deleteHero(1,"Batman",21,"Flying","Angry");
         assertEquals(1,hero.getId());
-    }
+        }
+        @Test
+        public void makeFirstHero_deleteAllHeroes() throws Exception{
+        Hero hero = setUpNewHero();
+        Hero otherHero = setUpNewHero();
+        hero.clearAllHeroes();
+        assertEquals(0,Hero.getAll().size());
+        }
 
     public Hero setUpNewHero(){
         return new Hero("Superman",34,"Flying","Emotional");
