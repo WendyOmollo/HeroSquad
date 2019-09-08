@@ -20,6 +20,13 @@ public class SquadTest {
         Squad squad = setUpNewSquad();
         assertEquals(true ,squad instanceof Squad);
     }
+    @Test
+    public void makeNewSquad_confirmIfMade_getDetails() throws Exception{
+        Squad squad = setUpNewSquad();
+        assertEquals("Titans",squad.getName());
+        assertEquals(4,squad.getMaxSize());
+        assertEquals("Beating thieves",squad.getMission());
+    }
 
     public Squad setUpNewSquad(){
         return new Squad("Titans",4,"Beating thieves");

@@ -13,4 +13,28 @@ package models;
         this.mission = mission;
 //        this.identifier = identifier;
         }
+
+        public int getMaxSize() {
+            return maxSize;
+        }
+
+        public void setMaxSize(int maxSize) {
+            this.maxSize = maxSize;
+        }
+
+        public String getMission() {
+            return mission;
+        }
+
+        public void setMission(String mission) {
+            this.mission = mission;
+        }
+
+        public String getName() {
+            return name;
+        }
+
+        public void setName(String name) {
+            this.name = name;
+        }
     }
