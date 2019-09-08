@@ -14,6 +14,7 @@ public class SquadTest {
 
     @After
     public void tearDown() throws Exception {
+        Squad.clearAllSquads();
     }
     @Test
     public void makeNewSquad_true() throws Exception{
@@ -43,6 +44,13 @@ public class SquadTest {
         Squad squad = setUpNewSquad();
         squad.deleteSquad("Titans",4,"Beating thieves",1);
         assertEquals(1,squad.getIdentifier());
+    }
+    @Test
+    public void makeSquads_deleteAllSquads() throws Exception{
+        Squad squad = setUpNewSquad();
+        Squad otherSquad = setUpNewSquad();
+        squad.clearAllSquads();
+        assertEquals(0,Squad.getAll().size());
     }
 
     public Squad setUpNewSquad(){
