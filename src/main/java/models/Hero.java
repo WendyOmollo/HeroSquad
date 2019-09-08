@@ -1,4 +1,6 @@
-    public class Hero {
+package models;
+
+public class Hero {
 
     private String name;
     private int age;
