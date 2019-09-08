@@ -18,4 +18,12 @@ public class HeroTest  {
         Hero hero = new Hero("Batman",20,"Flying","Angry");
         assertEquals(true,hero instanceof Hero);
     }
+    @Test
+    public void makeFirstHero_confirmIfMade_getAllDetails() throws Exception{
+        Hero hero = new Hero("Batman",20,"Flying","Angry");
+        assertEquals(true,hero.getName());
+        assertEquals(true,hero.getAge());
+        assertEquals(true,hero.getStrength());
+        assertEquals(true,hero.getWeakness());
+    }
 }
