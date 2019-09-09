@@ -40,12 +40,13 @@ build/
 out/
 out
 .gradle
-gradle
-gradlew.bat
 
+gradlew.bat
+!gradlew
 settings.gradle
 
 # IntelliJ #
 ############
 .idea
 .idea/
+!gradle-wrapper.jar
