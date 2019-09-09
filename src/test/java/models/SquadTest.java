@@ -51,7 +51,7 @@ public class SquadTest {
         Squad otherSquad = setUpNewSquad();
         squad.clearAllSquads();
         assertEquals(0,Squad.getAll().size());
-    }
+    }@Test
 
     public Squad setUpNewSquad(){
         return new Squad("Titans",4,"Beating thieves");
