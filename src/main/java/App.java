@@ -19,14 +19,13 @@ import static spark.Spark.*;
                 model.put("heroes",heroes);
                 return new ModelAndView(model,"index.hbs");
             },new HandlebarsTemplateEngine());
-//gets the form for adding a hero
+//gets the form for making a squad
             get("/form",(request,response) ->{
                 Map<String, Object>model = new HashMap<String,Object>();
                 return new ModelAndView(model,"hero-form.hbs");
             },new HandlebarsTemplateEngine());
 
-//gets the input from the user
-            get("/",(request,res)->{
+            get("/hero-card",(request,res)->{
                 Map<String, Object> model = new HashMap<>();
                 String heroName = request.queryParams("heroName");
                 String heroAge = request.queryParams("heroAge");
@@ -39,17 +38,16 @@ import static spark.Spark.*;
                 return new ModelAndView(model,"index.hbs");
             },new HandlebarsTemplateEngine());
 
-            post("/hero-card",(req,res)->{
-                Map<String, Object> model = new HashMap<>();
-                ArrayList<Hero> heroes = Hero.getAll();
-                model.put("heroes",heroes);
+            post("/",(request,response) ->{
+                Map<String, Object>model = new HashMap<String,Object>();
                 return new ModelAndView(model,"index.hbs");
             },new HandlebarsTemplateEngine());
 
-            get("/formSquad",(request,response) ->{
+            get("/squadForm",(request,response) ->{
                 Map<String, Object>model = new HashMap<String,Object>();
                 return new ModelAndView(model,"squad-form.hbs");
             },new HandlebarsTemplateEngine());
+
 
 
         }

@@ -1,7 +1,7 @@
 <link rel="stylesheet" href="styles.css">
 {{#partial "content"}}
     <h1>Hero Time!</h1>
-    <p>Engulf yourself with the heroes we have here!</p>
+    <h2 class="text-center">Heroes</h2>
     <!-- Card group -->
     <div class="card-group">
 
@@ -44,11 +44,11 @@
             <!-- Card content -->
             <div class="card-body">
                 <!-- Title -->
-                <h4 class="card-title"><strong>Batman</strong></h4>
+                <h4 class="card-title"><strong>Superman</strong></h4>
                 <!-- Text -->
-                <p class="card-text"><strong>Age:</strong>21</p>
+                <p class="card-text"><strong>Age:</strong>23</p>
                 <p class="card-text"><strong>Strength:</strong>Flying</p>
-                <p class="card-text"><strong>Weakness:</strong>Angry</p>
+                <p class="card-text"><strong>Weakness:</strong>Sand</p>
             </div>
             <!-- Card content -->
 
@@ -68,11 +68,11 @@
             <!-- Card content -->
             <div class="card-body">
                 <!-- Title -->
-                <h4 class="card-title"><strong>Batman</strong></h4>
+                <h4 class="card-title"><strong>The Flash</strong></h4>
                 <!-- Text -->
-                <p class="card-text"><strong>Age:</strong>21</p>
-                <p class="card-text"><strong>Strength:</strong>Flying</p>
-                <p class="card-text"><strong>Weakness:</strong>Angry</p>
+                <p class="card-text"><strong>Age:</strong>23</p>
+                <p class="card-text"><strong>Strength:</strong>Speed</p>
+                <p class="card-text"><strong>Weakness:</strong>Emotions</p>
             </div>
             <!-- Card content -->
 
@@ -80,10 +80,11 @@
         <!-- Card -->
 
     </div>
+    <h2 class="text-center">Squads that change the world!!</h2>
     <!-- Card group -->
-{{#if heroes}}
-    {{#each heroes}}
-    <div class="card mb-4 w-40 h-5">
+    <div class="card-group">
+    <!-- Card -->
+    <div class="card mb-4  mr-4">
 
         <!-- Card image -->
         <div class="view overlay">
@@ -96,6 +97,76 @@
         <div class="card-body">
 
             <!-- Title -->
+            <h4 class="card-title"><strong>Phantoms</strong></h4>
+            <!-- Text -->
+            <p class="card-text"><strong>Size:</strong>4</p>
+            <p class="card-text"><strong>Course:</strong>Teaching boys to be men</p>
+
+        </div>
+        <!-- Card content -->
+
+    </div>
+    <!-- Card -->
+
+    <!-- Card -->
+    <div class="card mb-4 mr-4">
+
+        <!-- Card image -->
+        <div class="view overlay">
+
+            <a href="#!">
+                <div class="mask rgba-white-slight"></div>
+            </a>
+        </div>
+
+        <!-- Card content -->
+        <div class="card-body">
+            <!-- Title -->
+            <h4 class="card-title"><strong>Power Puff Girls</strong></h4>
+            <!-- Text -->
+            <p class="card-text"><strong>Size:</strong>3</p>
+            <p class="card-text"><strong>Strength:</strong>Taking Mojo Jojo for a bath</p>
+        </div>
+        <!-- Card content -->
+
+    </div>
+    <!-- Card -->
+
+    <!-- Card -->
+    <div class="card mb-4 mr-4">
+
+        <!-- Card image -->
+        <div class="view overlay">
+            <a href="#!">
+                <div class="mask rgba-white-slight"></div>
+            </a>
+        </div>
+
+        <!-- Card content -->
+        <div class="card-body">
+            <!-- Title -->
+            <h4 class="card-title"><strong>Titans</strong></h4>
+            <!-- Text -->
+            <p class="card-text"><strong>Size:</strong>4</p>
+            <p class="card-text"><strong>Course:</strong>Taking kids to school</p>
+
+        </div>
+        <!-- Card content -->
+
+    </div>
+    <!-- Card -->
+    </div>
+
+    <div class="card mb-4 w-40 h-5">
+        <!-- Card image -->
+        <div class="view overlay">
+            <a href="#!">
+                <div class="mask rgba-white-slight"></div>
+            </a>
+        </div>
+        <!-- Card content -->
+        <div class="card-body">
+            <!-- Title -->
             <h4 class="card-title"><strong>{{ heroName }}</strong></h4>
             <!-- Text -->
             <p class="card-text"><strong>Age:</strong>{{ heroAge }}</p>
@@ -103,12 +174,7 @@
             <p class="card-text"><strong>Weakness:</strong>{{ heroWeakness }}</p>
         </div>
         <!-- Card content -->
-
     </div>
-        {{/each}}
-    {{ else }}
-    <p>No heroes added</p>
-{{/if}}
 {{/partial}}
 
 {{>layout.hbs}}
