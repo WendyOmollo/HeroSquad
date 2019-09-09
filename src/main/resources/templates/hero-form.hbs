@@ -1,6 +1,6 @@
 {{#partial "content"}}
     <h1>Create your own hero!!</h1>
-    <form action="/hero-card">
+    <form action="/" method="post">
     <div class="md-form w-50">
         <input id="input-char-counter" name="heroName" type="text" length="5" class="form-control">
         <label for="input-char-counter">Name</label>
@@ -16,7 +16,7 @@
     <div class="md-form w-50">
         <input id="input-char-counter" name="heroWeakness" type="text" length="5" class="form-control">
         <label for="input-char-counter">Weakness</label>
-        <a href="/hero-card"><button type="submit" class="btn btn-secondary" >Go!</button></a>
+        <a href=""><button type="submit" class="btn btn-secondary" >Go!</button></a>
     </div>
     </form>
 {{/partial}}
