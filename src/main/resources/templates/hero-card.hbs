@@ -1,0 +1,29 @@
+{{#partial "content"}}
+<!-- Card -->
+<div class="card mb-4  mr-4">
+
+
+    <!-- Card image -->
+    <div class="view overlay">
+        <a href="#!">
+            <div class="mask rgba-white-slight"></div>
+        </a>
+    </div>
+
+    <!-- Card content -->
+    <div class="card-body">
+
+        <!-- Title -->
+        <h4 class="card-title"><strong>{{ heroName }}</strong></h4>
+        <!-- Text -->
+        <p class="card-text"><strong>Age:</strong>{{ heroAge }}</p>
+        <p class="card-text"><strong>Strength:</strong>{{ heroStrength }}</p>
+        <p class="card-text"><strong>Weakness:</strong>{{ heroWeakness }}</p>
+    </div>
+    <!-- Card content -->
+
+</div>
+<!-- Card -->
+{{/partial}}
+
+{{> layout.hbs}}

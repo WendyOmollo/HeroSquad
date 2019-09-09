@@ -26,18 +26,18 @@ import static spark.Spark.*;
             },new HandlebarsTemplateEngine());
 
 
-//            get("/hero-card",(req,res)->{
-//                Map<String, Object> model = new HashMap<>();
-//                String heroName = request.queryParams("heroName");
-//                int heroAge = request.queryParams("heroAge");
-//                String heroStrength = request.queryParams("heroStrength");
-//                String heroWeakness = request.queryParams("heroWeakness");
-//                model.put("heroName",heroName);
-//                model.put("heroAge",heroAge);
-//                model.put("heroStrength",heroStrength);
-//                model.put("heroWeakness",heroWeakness);
-//                return new ModelAndView(model,"");
-//            },new HandlebarsTemplateEngine());
+            get("/hero-card",(request,res)->{
+                Map<String, Object> model = new HashMap<>();
+                String heroName = request.queryParams("heroName");
+                String heroAge = request.queryParams("heroAge");
+                String heroStrength = request.queryParams("heroStrength");
+                String heroWeakness = request.queryParams("heroWeakness");
+                model.put("heroName",heroName);
+                model.put("heroAge",heroAge);
+                model.put("heroStrength",heroStrength);
+                model.put("heroWeakness",heroWeakness);
+                return new ModelAndView(model,"hero-card.hbs");
+            },new HandlebarsTemplateEngine());
 
         }
     }

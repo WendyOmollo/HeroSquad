@@ -1,22 +1,24 @@
 {{#partial "content"}}
     <h1>Create your own hero!!</h1>
-    <div class="md-form">
-        <input id="input-char-counter" type="text" length="5" class="form-control">
+    <form action="/hero-card">
+    <div class="md-form w-50">
+        <input id="input-char-counter" name="heroName" type="text" length="5" class="form-control">
         <label for="input-char-counter">Name</label>
     </div>
-    <div class="md-form">
-        <input id="input-char-counter" type="text" length="5" class="form-control">
+    <div class="md-form w-50">
+        <input id="input-char-counter" name="heroAge" type="text" length="5" class="form-control">
         <label for="input-char-counter">Age</label>
     </div>
-    <div class="md-form">
-        <input id="input-char-counter" type="text" length="5" class="form-control">
+    <div class="md-form w-50">
+        <input id="input-char-counter" name="heroStrength" type="text" length="5" class="form-control">
         <label for="input-char-counter">Strength</label>
     </div>
-    <div class="md-form">
-        <input id="input-char-counter" type="text" length="5" class="form-control">
+    <div class="md-form w-50">
+        <input id="input-char-counter" name="heroWeakness" type="text" length="5" class="form-control">
         <label for="input-char-counter">Weakness</label>
-        <button type="button" class="btn btn-secondary">Secondary</button>
+        <a href="/hero-card"><button type="submit" class="btn btn-secondary" >Go!</button></a>
     </div>
+    </form>
 {{/partial}}
 
 {{> layout.hbs}}
