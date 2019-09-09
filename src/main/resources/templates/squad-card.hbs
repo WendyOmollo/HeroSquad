@@ -1,0 +1,26 @@
+{{#partial "content"}}
+    <!-- Card -->
+    <div class="card mb-4  mr-4">
+
+        <!-- Card image -->
+        <div class="view overlay">
+            <a href="#!">
+                <div class="mask rgba-white-slight"></div>
+            </a>
+        </div>
+
+        <!-- Card content -->
+        <div class="card-body">
+
+            <!-- Title -->
+            <h4 class="card-title"><strong>{{ squadName }}</strong></h4>
+            <!-- Text -->
+            <p class="card-text"><strong>Size:</strong>{{ squadMaxSize }}</p>
+            <p class="card-text"><strong>Course:</strong>{{ squadCourse }}</p>
+
+        </div>
+        <!-- Card content -->
+
+{{/partial}}
+
+{{> layout.hbs}}

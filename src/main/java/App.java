@@ -53,7 +53,29 @@ import static spark.Spark.*;
                 return new ModelAndView(model,"squad-form.hbs");
             },new HandlebarsTemplateEngine());
 
+//gets input of the squad form
+            get("/squad-card",(request,response)->{
+            Map<String, Object> model = new HashMap<>();
+            String squadName = request.queryParams("squadName");
+            String squadMaxSize = request.queryParams("squadMaxSize");
+            String squadCourse = request.queryParams("squadCourse");
+            model.put("squadName",squadName);
+            model.put("squadMaxSize",squadMaxSize);
+            model.put("squadCourse",squadCourse);
+            return new ModelAndView(model,"index.hbs");
+        },new HandlebarsTemplateEngine());
 
+            post("/",(request,response) ->{
+                Map<String, Object>model = new HashMap<String,Object>();
+                return new ModelAndView(model,"index.hbs");
+            },new HandlebarsTemplateEngine());
 
         }
     }
+
+
+
+
+
+
+
