@@ -12,6 +12,7 @@ import static spark.Spark.*;
     public class App {
         public static void main(String[] args) {
             staticFileLocation("/public");
+
 //displays the landing page
             get("/",(req,res)->{
             Map<String, Object> model = new HashMap<>();
@@ -19,12 +20,14 @@ import static spark.Spark.*;
                 model.put("heroes",heroes);
                 return new ModelAndView(model,"index.hbs");
             },new HandlebarsTemplateEngine());
+
 //gets the form for making a squad
             get("/form",(request,response) ->{
                 Map<String, Object>model = new HashMap<String,Object>();
                 return new ModelAndView(model,"hero-form.hbs");
             },new HandlebarsTemplateEngine());
 
+//takes the input of the form
             get("/hero-card",(request,res)->{
                 Map<String, Object> model = new HashMap<>();
                 String heroName = request.queryParams("heroName");
@@ -38,11 +41,13 @@ import static spark.Spark.*;
                 return new ModelAndView(model,"index.hbs");
             },new HandlebarsTemplateEngine());
 
+//posts the details of the form to the landing page
             post("/",(request,response) ->{
                 Map<String, Object>model = new HashMap<String,Object>();
                 return new ModelAndView(model,"index.hbs");
             },new HandlebarsTemplateEngine());
 
+//gets the form for adding a squad
             get("/squadForm",(request,response) ->{
                 Map<String, Object>model = new HashMap<String,Object>();
                 return new ModelAndView(model,"squad-form.hbs");
