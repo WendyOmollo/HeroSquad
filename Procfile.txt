@@ -1,1 +1,1 @@
-/build/install/HeroSquad/bin/App
+web: ./build/install/HeroSquad/bin/App
